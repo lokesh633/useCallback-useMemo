@@ -1,0 +1,26 @@
+
+      -----------------USECALLBACK----------------
+
+    * in main component,we may have a need to add the sub component, 
+    * in that sub component we may have a send function as a props.
+    * if we change a state in main component , 
+    * the sub component also render subsiquently.
+    * here, useCallback help us to skip rendering the sub component
+    * by wrapping function inside the useCallBack with the dependency array
+
+    Syntax:
+         const functionName = useCallback(()=>{
+             return "
+         },[dependency array])
+
+
+      -----------------USEMEMO----------------
+
+    * useMemo help us to skip render pure function 
+    * by wrapping the pure function inside the useMemo function with the dependency array
+    * Note* we only use this hook with big calculation
+
+   Syntax:
+         const functionName = useMemo(()=>{
+             return "
+         },[dependency array])
